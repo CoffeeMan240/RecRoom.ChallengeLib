@@ -3,7 +3,7 @@ using RecRoom.ChallengeLib.Interfaces;
 
 namespace RecRoom.ChallengeLib.Challenges;
 
-public class ChallengeCountChallenge : ChallengeBase
+public class ChallengeCountChallenge : Challenge
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.ChallengeCountChallenge;
     

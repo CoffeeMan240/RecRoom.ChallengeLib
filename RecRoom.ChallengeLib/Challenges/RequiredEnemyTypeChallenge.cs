@@ -6,7 +6,7 @@ public class RequiredEnemyTypeChallenge : RequiredObjectChallenge<EnemyTypes, in
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredEnemyTypeChallenge;
 
-    public override int SerializeValue(EnemyTypes value)
+    protected override int SerializeValue(EnemyTypes value)
     {
        return (int)value;
     }

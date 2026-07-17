@@ -25,5 +25,5 @@ public abstract class RequiredObjectChallenge <T,TSerialized> : ChallengeBase
         return dictionary;
     }
 
-    public abstract TSerialized SerializeValue(T value);
+    protected abstract TSerialized SerializeValue(T value);
 }

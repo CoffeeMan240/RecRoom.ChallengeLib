@@ -5,7 +5,8 @@ namespace RecRoom.ChallengeLib.Challenges;
 public class RequiredGameModeActivityChallenge : RequiredObjectChallenge<LegacyGameModeType, int>
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredGameModeActivityChallenge;
-    public override int SerializeValue(LegacyGameModeType value)
+
+    protected override int SerializeValue(LegacyGameModeType value)
     {
         return (int)value;
     }

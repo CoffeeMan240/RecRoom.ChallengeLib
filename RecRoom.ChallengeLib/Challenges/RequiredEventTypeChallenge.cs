@@ -5,7 +5,8 @@ namespace RecRoom.ChallengeLib.Challenges;
 public class RequiredEventTypeChallenge : RequiredObjectChallenge<ChallengeEventTypes, int>
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredEventTypeChallenge;
-    public override int SerializeValue(ChallengeEventTypes value)
+
+    protected override int SerializeValue(ChallengeEventTypes value)
     {
         return (int)value;
     }

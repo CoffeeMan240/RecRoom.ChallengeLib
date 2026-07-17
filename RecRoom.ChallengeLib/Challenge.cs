@@ -15,13 +15,16 @@ public class Challenge : ChallengeBase
         {
             withConditions.Add(item.Serialize());
         }
-        var resetConditions = new List<Dictionary<string, object>>();
-        foreach (var item in ResetConditions)
+        if (ResetConditions.Count > 0)
         {
-            resetConditions.Add(item.Serialize());
+            var resetConditions = new List<Dictionary<string, object>>();
+            foreach (var item in ResetConditions)
+            {
+                resetConditions.Add(item.Serialize());
+            }
+            baseChallenge.Add("rc", resetConditions);
         }
         baseChallenge.Add("wc", withConditions);
-        baseChallenge.Add("rc", resetConditions);
         if (IgnorePreviousCompletions)
         {
             baseChallenge.Add("ipc", true);

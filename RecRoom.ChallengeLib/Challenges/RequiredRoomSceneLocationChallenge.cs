@@ -5,7 +5,8 @@ namespace RecRoom.ChallengeLib.Challenges;
 public class RequiredRoomSceneLocationChallenge : RequiredObjectChallenge<RoomSceneLocations, Dictionary<string, object>>
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredRoomSceneLocationChallenge;
-    public override Dictionary<string, object> SerializeValue(RoomSceneLocations value)
+
+    protected override Dictionary<string, object> SerializeValue(RoomSceneLocations value)
     {
         var dictionary = new Dictionary<string, object>();
         dictionary.Add("l", RoomSceneIdMappings[value]);

@@ -18,7 +18,7 @@ public class TimedBufferChallenge : Challenge
             counts.Add(challenge.Serialize());
         }
         dictionary.Add("ccc", counts);
-        dictionary.Add("i", CultureInfo.CurrentCulture);
+        dictionary.Add("i", Interval.ToString("F2", CultureInfo.InvariantCulture));
         dictionary.Add("t", Total);
         dictionary.Add("pm", ProgressMode);
         if (NotificationCounts.Count > 0)
@@ -35,13 +35,14 @@ public class TimedBufferChallenge : Challenge
     }
     public TimedBufferChallenge(){}
 
-    public TimedBufferChallenge(List<IChallenge> challengesToCount, int total,
+    public TimedBufferChallenge(List<IChallenge> challengesToCount, int total, int interval,
         TimedBufferChallengeProgressMode progressMode = TimedBufferChallengeProgressMode.Complete,
         List<int> notificationCounts = null, bool persistBuffer = false,
         BufferCountMethods bufferCountMethods = BufferCountMethods.Count)
     {
         ChallengesToCount = challengesToCount;
         Total = total;
+        Interval = interval;
         ProgressMode = progressMode;
         NotificationCounts = notificationCounts;
         PersistBuffer = persistBuffer;
@@ -50,6 +51,7 @@ public class TimedBufferChallenge : Challenge
     
     public List<IChallenge> ChallengesToCount { get; set; }
     public int Total { get; set; }
+    public int Interval { get; set; }
     public TimedBufferChallengeProgressMode ProgressMode { get; set; }
     public List<int> NotificationCounts { get; set; }
     public bool PersistBuffer { get; set; }
