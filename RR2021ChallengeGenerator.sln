@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RR2021ChallengeGenerator", "RR2021ChallengeGenerator\RR2021ChallengeGenerator.csproj", "{2CE119EB-DF20-4C60-83B0-EA43DB5792F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecRoom.ChallengeLib", "RecRoom.ChallengeLib\RecRoom.ChallengeLib.csproj", "{61335774-D743-485B-BA68-5320C06EF54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE119EB-DF20-4C60-83B0-EA43DB5792F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE119EB-DF20-4C60-83B0-EA43DB5792F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE119EB-DF20-4C60-83B0-EA43DB5792F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE119EB-DF20-4C60-83B0-EA43DB5792F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61335774-D743-485B-BA68-5320C06EF54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61335774-D743-485B-BA68-5320C06EF54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61335774-D743-485B-BA68-5320C06EF54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61335774-D743-485B-BA68-5320C06EF54F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
