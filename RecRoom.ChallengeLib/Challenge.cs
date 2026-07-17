@@ -10,11 +10,6 @@ public class Challenge : ChallengeBase
     public override Dictionary<string, object> Serialize()
     {
         var baseChallenge = base.Serialize();
-        var withConditions = new List<Dictionary<string, object>>();
-        foreach (var item in WithConditions)
-        {
-            withConditions.Add(item.Serialize());
-        }
         if (ResetConditions.Count > 0)
         {
             var resetConditions = new List<Dictionary<string, object>>();
@@ -24,7 +19,15 @@ public class Challenge : ChallengeBase
             }
             baseChallenge.Add("rc", resetConditions);
         }
-        baseChallenge.Add("wc", withConditions);
+        if (WithConditions.Count > 0)
+        {
+            var withConditions = new List<Dictionary<string, object>>();
+            foreach (var item in WithConditions)
+            {
+                withConditions.Add(item.Serialize());
+            }
+            baseChallenge.Add("wc", withConditions);
+        }
         if (IgnorePreviousCompletions)
         {
             baseChallenge.Add("ipc", true);

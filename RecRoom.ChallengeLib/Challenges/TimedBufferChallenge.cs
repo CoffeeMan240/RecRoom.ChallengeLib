@@ -44,7 +44,10 @@ public class TimedBufferChallenge : Challenge
         Total = total;
         Interval = interval;
         ProgressMode = progressMode;
+        
+        if(notificationCounts!=null)
         NotificationCounts = notificationCounts;
+        
         PersistBuffer = persistBuffer;
         BufferCountMethods = bufferCountMethods;
     }
@@ -53,7 +56,7 @@ public class TimedBufferChallenge : Challenge
     public int Total { get; set; }
     public int Interval { get; set; }
     public TimedBufferChallengeProgressMode ProgressMode { get; set; }
-    public List<int> NotificationCounts { get; set; }
+    public List<int> NotificationCounts { get; set; } = new List<int>();
     public bool PersistBuffer { get; set; }
     public BufferCountMethods  BufferCountMethods { get; set; }
     //public List<TimedBufferEntry> BufferEntries { get; set; }
