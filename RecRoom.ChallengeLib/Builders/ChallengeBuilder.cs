@@ -2,7 +2,7 @@
 
 namespace RecRoom.ChallengeLib;
 
-public class ChallengeBuilder
+public class ChallengeBuilder : IChallengeBuilder
 {
     public static ChallengeBuilder CreateBuilder()
     {
@@ -15,18 +15,19 @@ public class ChallengeBuilder
 
     public ChallengeBuilder WithCondition(IChallenge withChallenge)
     {
-        challenge.WithConditions.Add(withChallenge);
+        ((Challenge)challenge).WithConditions.Add(withChallenge);
         return this;
     }
     public ChallengeBuilder ResetCondition(IChallenge resetChallenge)
     {
-        challenge.ResetConditions.Add(resetChallenge);
+        ((Challenge)challenge).ResetConditions.Add(resetChallenge);
         return this;
     }
 
-    public Challenge Build()
+    public IChallenge Build()
     {
         return this.challenge;
     }
-    private Challenge challenge;
+
+    public IChallenge challenge { get; set; }
 }

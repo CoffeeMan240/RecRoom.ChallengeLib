@@ -1,10 +1,10 @@
 ﻿using RecRoom.ChallengeLib.Enums;
 
 namespace RecRoom.ChallengeLib.Challenges;
-
+[Obsolete("This was removed for some reason")]
 public class RequiredToolChallenge : RequiredObjectChallenge<SpawnableToolTypes, int>
 {
-    public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredToolChallenge;
+    public override ChallengeTypes ChallengeType { get; }
     public override int SerializeValue(SpawnableToolTypes value)
     {
         return (int)value;
