@@ -25,4 +25,5 @@ public class ChallengeCountChallenge : Challenge
     
     public ChallengeCountChallenge(){}
     public ChallengeCountChallenge(int requiredCount, List<IChallenge> challengesToCount){RequiredCount = requiredCount;ChallengesToCount = challengesToCount;}
+    public ChallengeCountChallenge(int requiredCount, IChallenge challengeToCount){RequiredCount = requiredCount;ChallengesToCount = new List<IChallenge>(){challengeToCount};}
 }

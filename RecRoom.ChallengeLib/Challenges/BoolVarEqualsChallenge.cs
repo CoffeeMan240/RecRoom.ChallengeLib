@@ -2,7 +2,6 @@
 
 public class BoolVarEqualsChallenge : VarEqualsChallenge<bool, bool>
 {
-    //this is for EVENT TYPES ;-;
     protected override bool SerializeValue(bool value)
     {
         return value;

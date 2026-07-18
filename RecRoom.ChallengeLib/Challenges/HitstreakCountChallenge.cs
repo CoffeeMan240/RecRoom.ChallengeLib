@@ -8,7 +8,7 @@ public class HitstreakCountChallenge : TimedBufferChallenge
 {
     public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.HitstreakCountChallenge;
 
-    public HitstreakCountChallenge(int hitPerStreak, int totalCount, bool notify)
+    public HitstreakCountChallenge(int hitPerStreak, int totalCount, bool notify = false)
         :base(new List<IChallenge>(){new HitstreakChallenge(hitPerStreak)}, totalCount, -1)
     {
         this.PersistBuffer = true;
