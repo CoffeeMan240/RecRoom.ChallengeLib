@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RecRoom.ChallengeLib;
 using RecRoom.ChallengeLib.Challenges;
+using RecRoom.ChallengeLib.Data;
 using RecRoom.ChallengeLib.Enums;
 using RecRoom.ChallengeLib.Interfaces;
 
