@@ -10,11 +10,30 @@ public class RequiredEventTypeChallenge : RequiredObjectChallenge<ChallengeEvent
     {
         return (int)value;
     }
-    public RequiredEventTypeChallenge(){}
-
-    public RequiredEventTypeChallenge(List<ChallengeEventTypes> types)
+    public RequiredEventTypeChallenge()
     {
-        Values = types;
     }
-    public RequiredEventTypeChallenge(ChallengeEventTypes value) : this([value]){}
+
+    public RequiredEventTypeChallenge(List<ChallengeEventTypes> values)
+    {
+        Values = values;
+    }
+
+    public RequiredEventTypeChallenge(List<ChallengeEventTypes> values, bool inclusive)
+    {
+        Values = values;
+        Inclusive = inclusive;
+    }
+
+    public RequiredEventTypeChallenge(List<ChallengeEventTypes> values, bool inclusive, bool excludesIncludesNull)
+    {
+        Values = values;
+        Inclusive = inclusive;
+        ExcludesIncludesNull = excludesIncludesNull;
+    }
+
+    public RequiredEventTypeChallenge(ChallengeEventTypes value) : this(new List<ChallengeEventTypes>() { value }){}
+    public RequiredEventTypeChallenge(ChallengeEventTypes value, bool inclusive) : this(new List<ChallengeEventTypes>(){value},  inclusive){}
+    public RequiredEventTypeChallenge(ChallengeEventTypes value, bool inclusive, bool excludesIncludesNull) : this(new List<ChallengeEventTypes>(){value},  inclusive, excludesIncludesNull){}
+
 }

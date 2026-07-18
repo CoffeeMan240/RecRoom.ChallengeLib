@@ -12,12 +12,6 @@ public class RequiredRoomSceneLocationChallenge : RequiredObjectChallenge<RoomSc
         dictionary.Add("l", RoomSceneIdMappings[value]);
         return dictionary;
     }
-    public RequiredRoomSceneLocationChallenge(){}
-
-    public RequiredRoomSceneLocationChallenge(List<RoomSceneLocations> types)
-    {
-        Values = types;
-    }
 
     private Dictionary<RoomSceneLocations, string> RoomSceneIdMappings = new Dictionary<RoomSceneLocations, string>()
     {
@@ -63,4 +57,29 @@ public class RequiredRoomSceneLocationChallenge : RequiredObjectChallenge<RoomSc
         { RoomSceneLocations.FRONTIER_UGC, "a16bfd31-ffb9-46ac-a199-362c163130c0" },
         
     };
+    public RequiredRoomSceneLocationChallenge()
+    {
+    }
+
+    public RequiredRoomSceneLocationChallenge(List<RoomSceneLocations> values)
+    {
+        Values = values;
+    }
+
+    public RequiredRoomSceneLocationChallenge(List<RoomSceneLocations> values, bool inclusive)
+    {
+        Values = values;
+        Inclusive = inclusive;
+    }
+
+    public RequiredRoomSceneLocationChallenge(List<RoomSceneLocations> values, bool inclusive, bool excludesIncludesNull)
+    {
+        Values = values;
+        Inclusive = inclusive;
+        ExcludesIncludesNull = excludesIncludesNull;
+    }
+
+    public RequiredRoomSceneLocationChallenge(RoomSceneLocations value) : this(new List<RoomSceneLocations>() { value }){}
+    public RequiredRoomSceneLocationChallenge(RoomSceneLocations value, bool inclusive) : this(new List<RoomSceneLocations>(){value},  inclusive){}
+    public RequiredRoomSceneLocationChallenge(RoomSceneLocations value, bool inclusive, bool excludesIncludesNull) : this(new List<RoomSceneLocations>(){value},  inclusive, excludesIncludesNull){}
 }
