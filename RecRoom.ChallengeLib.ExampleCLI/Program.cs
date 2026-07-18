@@ -26,6 +26,7 @@ class Program
             challenge,
         });
         Console.WriteLine(JsonConvert.SerializeObject(ccc.Serialize()));*/
+        //AI hitstreak
         var fakeHitStreak = new ChallengeCountChallenge(3, new List<IChallenge>(){new RequiredEventTypeChallenge(new List<ChallengeEventTypes>()
         {
             ChallengeEventTypes.EliminatedAI
