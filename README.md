@@ -1,5 +1,5 @@
 # RecRoom.ChallengeLib
-This library replicates the data structure that Rec Room Weekly Challenge Configs use. This data was reverse engeneered from the 20200306 version of Rec Room, with data types from 20210813. No reason in particular, just had the builds at the time XD.
+This library replicates the data structure that Rec Room Weekly Challenge Configs use. This data was reverse engeneered from the 20200306 version of Rec Room, with data types from 20210813. No reason in particular, just had the builds at the time XD. This format didn't change for most of Rec Rooms life anyways, so use it in 2017, use it in 2023, use it in 2019! all will most likely work (though like may require some looking into game code to see if challenge types exist XD)
   
 # Usage
 ## Basic Challenge
