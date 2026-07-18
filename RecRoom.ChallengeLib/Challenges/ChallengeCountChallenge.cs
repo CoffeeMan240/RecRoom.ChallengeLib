@@ -5,7 +5,7 @@ namespace RecRoom.ChallengeLib.Challenges;
 
 public class ChallengeCountChallenge : Challenge
 {
-    public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.ChallengeCountChallenge;
+    public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.BoolVarEqualsChallenge;
     
     public List<IChallenge> ChallengesToCount { get; set; }
     public int RequiredCount { get; set; }

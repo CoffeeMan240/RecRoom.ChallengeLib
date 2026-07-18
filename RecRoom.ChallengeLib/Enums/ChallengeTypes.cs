@@ -11,7 +11,7 @@ public enum ChallengeTypes
     RequiredEventTypeChallenge = 6,
     RequiredRoomSceneLocationChallenge,
     RequiredEnemyTypeChallenge,
-    BoolVarEqualsChallenge, //theres nothing..
+    BoolVarEqualsChallenge,
     DiscGolfFinishUnderParChallenge = 11,
     RequiredGameModeActivityChallenge,
     CompleteGameWithoutChallenge,

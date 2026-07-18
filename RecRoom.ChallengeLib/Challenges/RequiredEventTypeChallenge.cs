@@ -16,4 +16,5 @@ public class RequiredEventTypeChallenge : RequiredObjectChallenge<ChallengeEvent
     {
         Values = types;
     }
+    public RequiredEventTypeChallenge(ChallengeEventTypes value) : this([value]){}
 }

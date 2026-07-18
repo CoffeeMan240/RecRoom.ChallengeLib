@@ -1,19 +1,15 @@
 ﻿using RecRoom.ChallengeLib.Enums;
+using RecRoom.ChallengeLib.Interfaces;
 
 namespace RecRoom.ChallengeLib.Challenges;
-[Obsolete("This was removed for some reason")]
-public class RequiredToolChallenge : RequiredObjectChallenge<SpawnableToolTypes, int>
+
+public class RequiredToolChallenge : Challenge
 {
-    public override ChallengeTypes ChallengeType { get; }
+    public RequiredToolChallenge() { }
 
-    protected override int SerializeValue(SpawnableToolTypes value)
+    public RequiredToolChallenge(SpawnableToolTypes tool)
     {
-        return (int)value;
-    }
-    public RequiredToolChallenge(){}
-
-    public RequiredToolChallenge(List<SpawnableToolTypes> types)
-    {
-        Values = types;
+        WithConditions.Add(new RequiredEventTypeChallenge(ChallengeEventTypes.PickedUpTool));
+        WithConditions.Add(new DynamicIntArithmaticChallenge(MathOperations.EQ, new VarNumResolver<int>("t_t"), new ConstantNumResolver<int>((int)tool)));
     }
 }
