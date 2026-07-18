@@ -4,6 +4,19 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>RecRoom.ChallengeLib</Title>
+        <Authors>coffee240</Authors>
+        <Description>Library that generates Rec Room's weekly challenge "Config" data. </Description>
+        <Copyright>Copyright 2026, coffee240</Copyright>
+        <PackageProjectUrl>https://github.com/CoffeeMan240/RecRoom.ChallengeLib</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/CoffeeMan240/RecRoom.ChallengeLib/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/CoffeeMan240/RecRoom.ChallengeLib</RepositoryUrl>
+        <PackageTags>recroom, weeklychallenge, generator, legacy</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Company>coffee240</Company>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
     </PropertyGroup>
 
 </Project>
