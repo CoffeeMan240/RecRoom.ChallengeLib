@@ -26,5 +26,10 @@ public class ChallengeCountChallengeBuilder : IChallengeBuilder
         ((ChallengeCountChallenge)challenge).ResetConditions.Add(challenge);
         return this;
     }
+
+    public IChallenge Build()
+    {
+        return challenge;
+    }
     public IChallenge challenge { get; set; }
 }
