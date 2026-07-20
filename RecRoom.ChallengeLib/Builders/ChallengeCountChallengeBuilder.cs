@@ -15,9 +15,9 @@ public class ChallengeCountChallengeBuilder : IChallengeBuilder
         challenge = new ChallengeCountChallenge(count, new List<IChallenge>());
     }
 
-    public ChallengeCountChallengeBuilder WithCondition(IChallenge challenge)
+    public ChallengeCountChallengeBuilder WithCondition(IChallenge challengeToCount)
     {
-        ((ChallengeCountChallenge)challenge).ChallengesToCount.Add(challenge);
+        ((ChallengeCountChallenge)challenge).ChallengesToCount.Add(challengeToCount);
         return this;
     }
 

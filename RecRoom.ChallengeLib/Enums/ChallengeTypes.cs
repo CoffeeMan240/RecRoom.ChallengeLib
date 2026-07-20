@@ -5,9 +5,9 @@ public enum ChallengeTypes
     Challenge,
     ChallengeCountChallenge,
     TimedBufferChallenge,
-    DynamicFloatArithmeticChallenge, //clamplicated
-    DynamicIntArithmeticChallenge, // see above
-    //RequiredToolChallenge, removed in radium 2021+, all that tool stuff for nothing ;-;
+    DynamicFloatArithmeticChallenge,
+    DynamicIntArithmeticChallenge,
+    RequiredToolChallenge,
     RequiredEventTypeChallenge = 6,
     RequiredRoomSceneLocationChallenge,
     RequiredEnemyTypeChallenge,

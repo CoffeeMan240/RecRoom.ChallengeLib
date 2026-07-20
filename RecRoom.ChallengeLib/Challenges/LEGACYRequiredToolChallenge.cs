@@ -4,7 +4,7 @@ namespace RecRoom.ChallengeLib.Challenges;
 [Obsolete("This was removed for some reason in later versions. For Legacy vers of RR before mid-late 2020, ignore me! :3", false)]
 public class LEGACYRequiredToolChallenge : RequiredObjectChallenge<SpawnableToolTypes, int>
 {
-    public override ChallengeTypes ChallengeType { get; }
+    public override ChallengeTypes ChallengeType { get; } = ChallengeTypes.RequiredToolChallenge;
 
     protected override int SerializeValue(SpawnableToolTypes value)
     {
