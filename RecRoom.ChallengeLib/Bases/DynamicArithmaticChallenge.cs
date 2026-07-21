@@ -18,7 +18,7 @@ public abstract class DynamicArithmaticChallenge<T> : ChallengeBase
         }
         if (NumResolverA != null)
         {
-            dictionary.Add("rB", NumResolverA.Serialize());
+            dictionary.Add("rB", NumResolverB.Serialize());
         }
         return dictionary;
     }
