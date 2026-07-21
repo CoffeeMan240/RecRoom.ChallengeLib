@@ -12,5 +12,5 @@ public class NumberResolver<T> : INumResolver<T>
         return dictionary;
     }
 
-    public NumResolverType Type { get; }
+    public virtual NumResolverType Type { get; }
 }
